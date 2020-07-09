@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvUsernameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="75dp"
+        android:text="Username"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUsernameTitle"
+        android:layout_alignStart="@+id/tvUsernameTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvPasswordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUsername"
+        android:layout_alignStart="@+id/etUsername"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPasswordTitle"
+        android:layout_alignStart="@+id/tvPasswordTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignEnd="@+id/etPassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/tvSignUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignStart="@+id/etPassword"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:text="Create an account"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSignUpTitle"
+        android:layout_alignStart="@+id/tvSignUpTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up" />
+</RelativeLayout>
