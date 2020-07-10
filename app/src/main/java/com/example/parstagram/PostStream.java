@@ -35,37 +35,7 @@ public class PostStream extends AppCompatActivity {
     PostAdapter adapter;
     SwipeRefreshLayout swipeContainer;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_stream, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.NewPost:
-            // new post option has been chosen
-                Intent toNewPost = new Intent(this, MainActivity.class);
-                startActivity(toNewPost);
-                break;
-            case R.id.LogOut:
-                logout();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void logout() {
-        // log out
-        ParseUser.logOut();
-        ParseUser currentUser = ParseUser.getCurrentUser();  // will be null
-
-        // go back to login page
-        Intent toLogin = new Intent(this, LoginActivity.class);
-        startActivity(toLogin);
-        finish();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +121,7 @@ public class PostStream extends AppCompatActivity {
 //                }
                 // save received posts to list and notify adapter of new data
                 posts.addAll(postObjects);
+
                 swipeContainer.setRefreshing(false);
                 adapter.notifyDataSetChanged();
             }

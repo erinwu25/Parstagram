@@ -39,8 +39,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
-    // bind views based on the position of the element
     @Override
+    // bind views based on the position of the element
     public void onBindViewHolder(@NonNull PostAdapter.ViewHolder holder, int position) {
         // get data
         Post post = posts.get(position);
@@ -97,10 +97,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             ParseFile image = post.getImage();
             if (image != null) {
                 ivPostImage.setVisibility(View.VISIBLE);
-                String test = image.getUrl();
+                String imgUrl = image.getUrl();
 
                 Glide.with(context)
-                        .load(test)
+                        .load(imgUrl)
                         .into(ivPostImage);
             } else {
                 ivPostImage.setVisibility(View.GONE);
