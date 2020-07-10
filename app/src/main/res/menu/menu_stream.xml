@@ -4,9 +4,9 @@
 
     <item
         android:id="@+id/NewPost"
-        android:icon="@drawable/instagram_new_post_outline_24"
+        android:icon="@drawable/direct"
         android:title="New Post"
-        app:showAsAction="withText" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/LogOut"
         android:title="Log Out"

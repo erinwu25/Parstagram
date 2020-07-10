@@ -10,13 +10,13 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="177dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/text_input_background"
         android:ems="10"
         android:hint="   Username"
@@ -43,48 +43,60 @@
 
     <Button
         android:id="@+id/btnLogin"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="0dp"
-        android:text="Login" />
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/loginbutton"
+        android:text="Log In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvSignUpTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogin"
-        android:layout_alignStart="@+id/etPassword"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="50dp"
-        android:text="Create an account"
-        android:textColor="#000000" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="OR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#8E8C8C" />
 
     <Button
         android:id="@+id/btnSignup"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvSignUpTitle"
-        android:layout_alignStart="@+id/tvSignUpTitle"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:text="Sign Up" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/createaccountbutton"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/etUsername"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="-100dp"
-        app:srcCompat="@drawable/instagram_logo" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/font_instagram" />
 
 
 </RelativeLayout>

@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
@@ -77,8 +80,15 @@ public class PostStream extends AppCompatActivity {
         // set action bar color
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
-        // set action bar title color
-//        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#ffffff\">Parstagram</font>"));
+        // set instagram logo in action bar?
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.font_instagram);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        // set icon in action bar left
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.camera);// set drawable icon
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Lookup the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
@@ -147,4 +157,5 @@ public class PostStream extends AppCompatActivity {
         });
 
     }
+
 }

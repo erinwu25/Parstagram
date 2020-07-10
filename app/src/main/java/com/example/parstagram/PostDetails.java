@@ -2,6 +2,8 @@ package com.example.parstagram;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.widget.ImageView;
@@ -29,6 +31,20 @@ public class PostDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_details);
+
+        // Define ColorDrawable object and parse color
+        // using parseColor method
+        // with color hash code as its parameter
+        ColorDrawable colorDrawable
+                = new ColorDrawable(Color.parseColor("#ffffff"));
+        // set action bar color
+        getSupportActionBar().setBackgroundDrawable(colorDrawable);
+
+        // set instagram logo in action bar?
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.font_instagram);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         // resolve view options
         tvDisplayUsername = findViewById(R.id.tvDisplayUsername);

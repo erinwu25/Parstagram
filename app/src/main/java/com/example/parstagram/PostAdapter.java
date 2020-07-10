@@ -74,6 +74,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         ImageView ivPostImage;
         TextView tvPostDescription;
         TextView tvPostTime;
+        TextView tvNameDescription;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,6 +82,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             ivPostImage = itemView.findViewById(R.id.ivPostImage);
             tvPostDescription = itemView.findViewById(R.id.tvPostDescription);
             tvPostTime = itemView.findViewById(R.id.tvPostTime);
+            tvNameDescription = itemView.findViewById(R.id.tvNameDescription);
 
             // itemView's onClickListener
             itemView.setOnClickListener(this);
@@ -90,6 +92,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvUsername.setText(post.getUser().getUsername());
             tvPostDescription.setText(post.getDescription());
             tvPostTime.setText(PostDetails.getRelativeTimeAgo(post.getKeyCreatedKey().toString()));
+            tvNameDescription.setText(post.getUser().getUsername());
 
             ParseFile image = post.getImage();
             if (image != null) {
