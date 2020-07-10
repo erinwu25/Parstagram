@@ -28,8 +28,8 @@ import java.util.List;
 public class PostsFragment extends Fragment {
 
     private RecyclerView rvPosts;
-    private PostAdapter adapter;
-    private List<Post> postList;
+    protected PostAdapter adapter;
+    protected List<Post> postList;
     SwipeRefreshLayout swipeContainer;
 
     private static final String TAG = "PostsFragment";
@@ -90,10 +90,16 @@ public class PostsFragment extends Fragment {
 
     }
 
-    private void queryPosts() {
+    protected void queryPosts() {
         // Specify which class to query
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+        // include data referred by user key
         query.include(Post.KEY_USER);
+        // limit query to latest 20 items
+        query.setLimit(20);
+        // order posts by creation date (newest first)
+        query.addDescendingOrder(Post.KEY_CREATED_KEY);
+        // start an asynchronous call for posts
         query.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
@@ -104,6 +110,7 @@ public class PostsFragment extends Fragment {
                 for (Post post: posts) {
                     Log.i(TAG, "Post: "+post.getDescription()+ ", username: "+post.getUser().getUsername());
                 }
+                // save received posts to list and notify adapter of new data (also stop refresh animation)
                 postList.addAll(posts);
                 swipeContainer.setRefreshing(false);
                 adapter.notifyDataSetChanged();
