@@ -55,6 +55,9 @@ Here's a walkthrough of implemented user stories:
 #### Part 3
 <img src='https://github.com/erinwu25/Parstagram/blob/master/parstagram3.gif' title='Video Walkthrough Part 3' width='' alt='Video Walkthrough' />
 
+#### Better GIF of the Post Detail View
+<img src='https://github.com/erinwu25/Parstagram/blob/master/parstagram4.gif' title='Video Walkthrough Part 4' width='' alt='Video Walkthrough' />
+
 GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
