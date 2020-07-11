@@ -66,7 +66,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## Notes
 
-I definitely learned a lot while building this app. I struggled with image assets a couple times. I still don't know what the issue was, but deleting the ImageView and adding it again solved the issue. This was a good exercise to see if we could apply what we've been learning 
+I definitely learned a lot while building this app. I struggled with image assets a couple times. I still don't know what the issue was, but deleting the ImageView and adding it again solved the issue. This was a good exercise to see if we could apply what we've been learning. P.S. Would you believe that one of the things I'm proudest of is the color gradient on the buttons on the compose screen? The GIF definitely doesn't do it justice
 
 ## License
 
